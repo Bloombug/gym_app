@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:background="#fff">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/nome_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="@color/teal_700"
+                    android:hint="Nome..."
+                    android:inputType="textPostalAddress" />
+
+                <EditText
+                    android:id="@+id/morada_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="@color/teal_700"
+                    android:hint="Morada..."
+                    android:inputType="text" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Idade:"
+                    android:paddingLeft="5dp"
+                    android:layout_margin="20dp"
+                    android:textSize="20sp"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:id="@+id/spinner_idade"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data Nascimento:"
+                    android:textSize="20sp"
+                    android:paddingLeft="30dp"/>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:weightSum="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:id="@+id/dia_data_nascimento"
+                        android:maxLength="2"
+                        android:backgroundTint="@color/teal_700"
+                        android:hint="Dia..."/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:backgroundTint="@color/teal_700"
+                        android:id="@+id/mes_data_nascimento"
+                        android:maxLength="2"
+                        android:hint="Mês..."/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:backgroundTint="@color/teal_700"
+                        android:id="@+id/ano_data_nascimento"
+                        android:maxLength="4"
+                        android:hint="Ano..."/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/nif_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="NIF..."
+                    android:backgroundTint="@color/teal_700"
+                    android:inputType="number"
+                    android:maxLength="9" />
+
+                <EditText
+                    android:id="@+id/telemovel_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Telemóvel..."
+                    android:backgroundTint="@color/teal_700"
+                    android:inputType="phone"
+                    android:maxLength="9" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:id="@+id/exercicios_texto"
+                        android:text="Exercícios \n(Seleccione os que pretende frequentar):"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/exercicios_texto">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/checkbox_superior"
+                            android:text="Superior"
+                            />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/checkbox_inferior"
+                            android:text="Inferior"
+                            />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/checkbox_musculacao"
+                            android:text="Musculação"
+                            />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/checkbox_barras"
+                            android:text="Barras"
+                            />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/checkbox_abs"
+                            android:text="Abdominais"
+                            />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:id="@+id/escolas_radio_group"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ESTG"></RadioButton>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ESECD"></RadioButton>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ESTH"></RadioButton>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ESS"></RadioButton>
+
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/curso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Curso..."
+                    android:backgroundTint="@color/teal_700"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/ano_curso_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Ano de curso..."
+                    android:backgroundTint="@color/teal_700"
+                    android:inputType="number"
+                    android:maxLength="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/personal_trainer_text"
+                        android:text="Personal Trainer:"
+                        android:paddingLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20sp"
+                        />
+
+                    <ToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="Sim"
+                        android:textOff="Não"
+                        android:textColor="#fff"
+                        android:background="@drawable/toggle_button_scheme"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/butao_submeter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="25dp"
+                    android:text="SUBMETER" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
